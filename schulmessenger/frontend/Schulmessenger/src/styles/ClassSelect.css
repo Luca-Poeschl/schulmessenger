@@ -1,0 +1,102 @@
+.classSelectWrapper {
+    position: relative;
+    width: 135px;
+    flex-shrink: 0;
+    margin-bottom: 0;
+    font-family: inherit;
+}
+
+.classSelectWrapper .classSelectShowButton {
+    width: 100%;
+    padding: 8px 10px;
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    text-align: left;
+    font-size: 0.88rem;
+    color: #374151;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.classSelectWrapper .classSelectShowButton:hover {
+    border-color: #9ca3af;
+}
+
+.classSelectWrapper .classSelectShowButton:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+.classSelectWrapper .classSelectShowButton::after {
+    content: "▼";
+    font-size: 0.65rem;
+    color: #6b7280;
+    transition: transform 0.2s ease;
+}
+
+.classSelectMenu {
+    position: absolute;
+    top: calc(100% + 4px);
+    right: 0;
+    left: auto;
+    min-width: 190px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 8px;
+    z-index: 50;
+    box-sizing: border-box;
+}
+
+.classSelectFilterInput {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 7px 10px;
+    margin-bottom: 6px;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.88rem;
+}
+
+.classSelectFilterInput:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.classSelectClassList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 180px;
+    overflow-y: auto;
+}
+
+.classSelectClassListItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 7px 9px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.88rem;
+    color: #1f2937;
+    transition: background-color 0.15s ease;
+    user-select: none;
+}
+
+.classSelectClassListItem:hover {
+    background-color: #f3f4f6;
+}
+
+.classSelectClassListItem input[type="checkbox"] {
+    cursor: pointer;
+    margin: 0;
+    accent-color: #2563eb;
+}

@@ -1,0 +1,6 @@
+@Schulmessenger.Api_HostAddress = http://localhost:5066
+
+GET {{Schulmessenger.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

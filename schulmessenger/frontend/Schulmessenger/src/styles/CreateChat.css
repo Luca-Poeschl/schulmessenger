@@ -1,0 +1,49 @@
+.createChatWrapper {
+    display: flex;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.createChatButton {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 16px;
+    font-size: 0.92rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+
+.createChatButton:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+    transform: translateY(-1px);
+}
+
+.createChatButton:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.3);
+}
+
+@media (max-width: 768px) {
+    .chatPageArea:has(.chatElement.active) .createChatWrapper {
+        width: auto;
+        flex-shrink: 0;
+    }
+
+    .chatPageArea:has(.chatElement.active) .createChatButton {
+        padding: 5px 12px;
+        font-size: 0.78rem;
+        border-radius: 9999px;
+        white-space: nowrap;
+    }
+}

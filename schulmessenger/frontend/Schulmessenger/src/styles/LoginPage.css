@@ -1,0 +1,92 @@
+.loginLayout {
+    max-width: 380px;
+    width: 90%;
+    margin: 5rem auto;
+    padding: 2.5rem 2rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.loginTitle {
+    margin: 0 0 1.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-align: center;
+    color: #1e293b;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.loginForm input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    color: #1e293b;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s, background-color 0.2s;
+}
+
+.loginForm input:focus {
+    background-color: #ffffff;
+    border-color: #1e60d5;
+    box-shadow: 0 0 0 3px rgba(30, 96, 213, 0.15);
+}
+
+.loginForm input::placeholder {
+    color: #94a3b8;
+}
+
+.loginButton {
+    margin-top: 0.5rem;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1e60d5;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.05s ease;
+}
+
+.loginButton:hover {
+    background-color: #154fb3;
+}
+
+.loginButton:active {
+    transform: scale(0.99);
+}
+
+.loginError {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    color: #b91c1c;
+    background-color: #fee2e2;
+    border: 1px solid transparent;
+    padding: 0 10px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    margin: 0;
+    transition: all 0.2s ease;
+}
+
+.loginError.visible {
+    max-height: 50px;
+    opacity: 1;
+    padding: 6px 10px;
+    margin-top: 4px;
+    border-color: #fca5a5;
+}

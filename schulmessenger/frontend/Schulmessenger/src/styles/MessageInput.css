@@ -1,0 +1,121 @@
+.messageInputForm {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 8px;
+    background-color: #ffffff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+    position: relative;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.messageInputForm:focus-within {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.messageInputField {
+    border: none;
+    background: transparent;
+    outline: none;
+    flex: 1;
+    resize: none;
+    min-height: 24px;
+    max-height: 120px;
+    overflow-y: auto;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 0.95rem;
+    line-height: 1.45;
+    color: #0f172a;
+    padding: 6px 4px;
+    scrollbar-width: thin;
+}
+
+.messageInputField::placeholder {
+    color: #94a3b8;
+}
+
+.messageSendButton {
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    align-self: flex-end;
+    box-shadow: 0 2px 5px rgba(37, 99, 235, 0.25);
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 38px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    flex-shrink: 0;
+    outline: none;
+}
+
+.messageSendButton:hover {
+    background: linear-gradient(135deg, #1d4ed8 0%, #1e40af 100%);
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.35);
+    transform: translateY(-1px);
+}
+
+.messageSendButton:active {
+    transform: translateY(0);
+    box-shadow: 0 1px 3px rgba(37, 99, 235, 0.25);
+}
+
+.errorMessage {
+    position: absolute;
+    top: -2.3rem;
+    left: 12px;
+    z-index: 20;
+    background-color: #fef2f2;
+    color: #dc2626;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    border: 1px solid #fecaca;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    white-space: nowrap;
+    pointer-events: none;
+    animation: tooltipFadeIn 0.15s ease-out;
+}
+
+@keyframes tooltipFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .messageInputForm {
+        padding: 6px 10px;
+        border-radius: 18px;
+        gap: 6px;
+    }
+
+    .messageInputField {
+        font-size: 0.9rem;
+        padding: 5px 2px;
+    }
+
+    .messageSendButton {
+        padding: 7px 14px;
+        font-size: 0.82rem;
+        height: 35px;
+    }
+}
